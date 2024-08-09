@@ -1,7 +1,9 @@
 # Learning Resources App
 
-Outcome:
-How components work
-How these features are used
-How components are combined
-How we can build Vue applications that use those features
+<h2>Learning Outcome:</h2>
+<ul>
+<li>How components work</li>
+<li>How these features are used</li>
+<li>How components are combined</li>
+<li>How we can build Vue applications that use those features</li>
+</ul>
