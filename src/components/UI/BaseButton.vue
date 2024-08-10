@@ -1,12 +1,12 @@
 <template>
-  <button :type="type" :class="mode">
+  <button :class="mode">
     <slot></slot>
     <!-- here we used slot for flexibility may be we have icon along with Delete text etc -->
   </button>
 </template>
 <script>
 export default {
-  props: ['type', 'mode'],
+  props: ['mode'],
 };
 </script>
 <style scoped>

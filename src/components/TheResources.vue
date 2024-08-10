@@ -49,6 +49,7 @@ export default {
   provide() {
     return {
       resources: this.storedResources, // we are providing all resources to low level component or child component or his child component
+      addResource: this.addResource, // this.addResource is my method
     };
   },
   computed: {
@@ -63,6 +64,16 @@ export default {
     setSelectedTab(tab) {
       console.log('activated ' + tab);
       this.selectedTab = tab;
+    },
+    addResource(title, description, url) {
+      const newResource = {
+        id: new Date().toISOString(),
+        title: title,
+        description: description,
+        link: url,
+      };
+      this.storedResources.unshift(newResource);
+      this.selectedTab = 'stored-resources';
     },
   },
 };

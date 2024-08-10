@@ -12,6 +12,9 @@ export default {
     TheHeader,
     TheResources,
   },
+  methods: {
+    addResource() {},
+  },
 };
 </script>
 <style>
