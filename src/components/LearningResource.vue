@@ -21,9 +21,6 @@
 export default {
   inject: ['deleteResource'],
   props: ['id', 'title', 'description', 'link'],
-  data() {
-    return {};
-  },
 };
 </script>
 <style scoped>
