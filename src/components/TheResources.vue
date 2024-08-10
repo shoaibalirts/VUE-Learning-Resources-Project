@@ -18,6 +18,7 @@
   <add-resource v-if="selectedTab === 'add-resource'"></add-resource> -->
 
   <keep-alive>
+    <!-- custom component -->
     <component :is="selectedTab"></component>
   </keep-alive>
 </template>
@@ -50,6 +51,7 @@ export default {
     return {
       resources: this.storedResources, // we are providing all resources to low level component or child component or his child component
       addResource: this.addResource, // this.addResource is my method
+      deleteResource: this.removeResource,
     };
   },
   computed: {
@@ -74,6 +76,17 @@ export default {
       };
       this.storedResources.unshift(newResource);
       this.selectedTab = 'stored-resources';
+    },
+    removeResource(resId) {
+      const resIndex = this.storedResources.findIndex(
+        (res) => res.id === resId
+      );
+      this.storedResources.splice(resIndex, 1);
+
+      //   this.storedResources = this.storedResources.filter(
+      //     (res) => res.id !== resId
+      //   );
+      //   console.log(this.storedResources);
     },
   },
 };

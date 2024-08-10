@@ -55,7 +55,7 @@ export default {
       if (
         enteredTitle.trim() === '' ||
         enteredDescription.trim() === '' ||
-        enteredLink.trim() === ''
+        enteredUrl.trim() === ''
       ) {
         this.inputIsInvalid = true;
         return;
