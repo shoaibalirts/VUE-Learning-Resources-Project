@@ -1,5 +1,5 @@
 <template>
-  <ul v-for="resource in storedResources" :key="resource.id">
+  <ul v-for="resource in resources" :key="resource.id">
     <learning-resource
       :title="resource.title"
       :description="resource.description"
@@ -13,7 +13,7 @@ export default {
   components: {
     LearningResource,
   },
-  props: ['storedResources'],
+  inject: ['resources'], // we have changed from props to inject
 };
 </script>
 
